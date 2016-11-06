@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lambda</title>
+</head>
+<body>
+
+	<div id="myDiv"></div><br>
+	
+	<button id="addText">Add text inside</button>
+	<button id="changeColor" onclick="changeTextColor('#f00')">Make me red!</button>
+	<button id="changeColor" onclick="changeTextColor('#0f0')">Make me green!</button>
+	<button id="changeColor" onclick="changeTextColor('#00f')">Make me blue!</button>
+	<br><br>
+
+	<input type="text" value="Initial text">
+	<button id="changeName">Make me a password</button>
+	<button id="changeName-text">Make me a text</button>
+	<button id="changeValue">Change my value</button>
+
+	<script>
+		
+		function changeTextColor(hex){
+			document.getElementById('myDiv').style.color = hex;
+		}
+		
+		// Add text inside me
+		document.getElementById('addText').onclick = function() {
+			document.getElementById('myDiv').innerHTML = "YAY! I am not empty now!";
+		};
+
+		// Make me a password
+		document.getElementById('changeName').onclick = function() {
+			document.getElementsByTagName('input')[0].type = "password";
+		};
+
+		// Make me a text
+		document.getElementById('changeName-text').onclick = function() {
+			document.getElementsByTagName('input')[0].type = "text";
+		};
+
+		// Change my value
+		document.getElementById('changeValue').onclick = function() {
+			document.getElementsByTagName('input')[0].value = "Value changed";
+		};
+
+	</script>
+
+</body>
+</html>

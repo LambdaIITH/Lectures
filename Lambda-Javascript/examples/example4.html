@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lambda</title>
+</head>
+<body>
+
+<button id="me" onclick="startAnimation()" style="top:0;left:0;position:relative">Click Me</button>
+
+<script>
+	function startAnimation(){
+
+		var element = document.getElementById('me');
+
+		var xPos = 0;
+		var yPos = 0;
+
+		var count = 10;
+
+		moveDown();
+
+		function moveDown() {
+			yPos += 10;
+			element.style.top = yPos + "px";
+			element.style.padding = (yPos/2) + "px";
+			if(count--){
+				setTimeout(moveDown,30)
+			} else {
+				count = 10;
+				moveRight();
+			}
+		}
+
+		function moveRight() {
+			xPos += 10;
+			element.style.left = xPos + "px";
+			if(count--){
+				setTimeout(moveRight,30)
+			} else {
+				count = 10;
+				moveUp();
+			}
+		}
+
+		function moveUp() {
+			yPos -= 10;
+			element.style.top = yPos + "px";
+			element.style.padding = (yPos/2) + "px";
+			if(count--){
+				setTimeout(moveUp,30)
+			} else {
+				count = 10;
+				moveLeft();
+			}
+		}
+
+		function moveLeft() {
+			xPos -= 10;
+			element.style.left = xPos + "px";
+			if(count--){
+				setTimeout(moveLeft,30)
+			}
+		}
+
+	}
+</script>
+
+</body>
+</html>

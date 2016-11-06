@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lambda - Jquery</title>
+	<script src="jquery-1.11.2.min.js"></script><!-- You need to include JQuery source file -->
+</head>
+<body>
+
+	<div id="myDiv"></div><br>
+	<button id="addText">Add text inside</button>
+	<button id="changeColor" onclick="changeTextColor('#f00')">Make me red!</button>
+	<button id="changeColor" onclick="changeTextColor('#0f0')">Make me green!</button>
+	<button id="changeColor" onclick="changeTextColor('#00f')">Make me blue!</button>
+	<br><br>
+
+	<input type="text" value="Initial text">
+	<button id="changeName">Make me a password</button>
+	<button id="changeName-text">Make me a text</button>
+	<button id="changeValue">Change my value</button>
+
+	<script>
+		
+		function changeTextColor(hex){
+			$("#myDiv").css('color',hex);
+		}
+		
+		// Add text inside me
+		$("#addText").click(function(){
+			$("#myDiv").html("YAY! I am not empty now!");
+		});
+
+		// Make me a text
+		$("#changeName-text").click(function(){
+			$("input").attr('type','text');
+		});
+
+		// Make me a password
+		$("#changeName").click(function(){
+			$("input").attr('type','password');
+		});
+
+		// Change my value
+		$("#changeValue").click(function(){
+			$("input").val("Value changed");
+		});
+
+	</script>
+
+</body>
+</html>

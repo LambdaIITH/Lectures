@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON | Lambda</title>
+</head>
+<body>
+<pre>
+	// dont forget comma(',') after every (key,value) pair
+	var anObject = {
+		key1: 10, // Number
+		key2: "a string", // String
+		key3: function(){ // funtion
+			return "Hello";
+		},
+		key4: { // another JSON
+			key5: [1,2,3,4] // an array
+		}
+	};
+	// console.log() ==> to log in the console
+	console.log( anObject );
+	console.log( anObject.key1 );
+	console.log( anObject.key2 );
+	console.log( anObject.key3() );
+	console.log( anObject.key4.key5[2] );
+	// check console now :P
+</pre>
+
+
+
+<script>
+	var anObject = {
+		// dont forget comma(',') after every (key,value) pair
+		key1: 10, // Number
+		key2: "a string", // String
+		key3: function(){ // funtion
+			return "Hello";
+		},
+		key4: { // another JSON
+			key5: [1,2,3,4], // an array
+		}
+	};
+// console.log() ==> to log in the console
+	console.log( anObject );
+	console.log( anObject.key1 );
+	console.log( anObject.key2 );
+	console.log( anObject.key3() );
+	console.log( anObject.key4.key5[2] );
+</script>
+</body>
+</html>
